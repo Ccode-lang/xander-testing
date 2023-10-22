@@ -5,10 +5,10 @@ def onload():
     log("Voice plugin loaded!")
 
 async def onmessage(message):
-    if message.content.startswith("!join "):
+    if message.content == "!join":
         await join_vc(message.author.voice.channel)
         return False
-    elif message.content == ("!leave"):
+    elif message.content == "!leave":
         await leave_vc()
     return True
 
