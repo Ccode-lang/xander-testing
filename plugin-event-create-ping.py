@@ -7,7 +7,7 @@ def onload():
 async def onscheduledeventcreate(event):
     channel = discord.utils.get(
         event.guild.text_channels, name="announcement")
-    await channel.send(f"@everyone new even named \"{event.name}\" was created!")
+    await channel.send(f"@everyone new event named \"{event.name}\" was created!")
     
 
 async def onmessage(message):
