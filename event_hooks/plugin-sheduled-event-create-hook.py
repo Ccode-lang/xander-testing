@@ -17,15 +17,12 @@ async def on_scheduled_event_create(event):
         try:
             if hasattr(plugin, 'onscheduledeventcreate'):
                 go = await plugin.onscheduledeventcreate(event)
-            else:
-                go = True
         except:
             log(f"Caught the following exception:\n{format_exc()}")
-            go = True
+        if not go:
+            return
 
 
-async def onmessage(message):
-    return True
 
 
 def onexit():
