@@ -10,8 +10,6 @@ async def onscheduledeventcreate(event):
     await channel.send(f"@everyone new event named \"{event.name}\" was created!")
     
 
-async def onmessage(message):
-    return True
 
 
 def onexit():
